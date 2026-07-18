@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GHOTI MARKET | বাংলাদেশের বিশ্বস্ত অনলাইন মার্কেটপ্লেস</title>
+  <meta name="description" content="GHOTI MARKET বাংলাদেশের বিশ্বস্ত অনলাইন মার্কেটপ্লেস। Daraz, Alibaba, AliExpress এর বিকল্প। সারাদেশে ফাস্ট হোম ডেলিভারি, ক্যাশ অন ডেলিভারি, ১০% নিরাপদ কেনাকাটা।">
+  <meta name="keywords" content="ghoti market, ঘটি মার্কেট, অনলাইন শপিং বাংলাদেশ, daraz alternative, বাংলাদেশি ইকমার্স, ক্যাশ অন ডেলিভারি, অনলাইন বাজার">
+  <meta name="author" content="GHOTI MARKET">
+  <meta name="theme-color" content="#16A34A">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://about.ghotimarket.com/">
+  <link rel="icon" href="https://www.ghotimarket.com/logo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;800;900&display=swap" rel="stylesheet">
+  
+  <!-- SEO Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "GHOTI MARKET",
+    "url": "https://www.ghotimarket.com",
+    "logo": "https://www.ghotimarket.com/logo.png",
+    "description": "বাংলাদেশের বিশ্বস্ত অনলাইন মার্কেটপ্লেস",
+    "address": {"@type": "PostalAddress", "addressCountry": "BD"},
+    "areaServed": "BD",
+    "contactPoint":{
+ "@type":"ContactPoint",
+ "telephone":"+8801727003670",
+ "contactType":"customer support",
+ "areaServed":"BD"
+}  
+    "sameAs": ["https://www.ghotimarket.com", "https://app.ghotimarket.com", "https://facebook.com/ghotimarket", "https://youtube.com/@ghotimarket", "https://ghotimarket.com/contact"]
+  }
+  </script>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GHOTI MARKET | বাংলাদেশের বিশ্বস্ত অনলাইন মার্কেটপ্লেস">
+  <meta property="og:description" content="বাংলাদেশের বিশ্বস্ত অনলাইন মার্কেটপ্লেস।">
+  <meta property="og:image" content="https://www.ghotimarket.com/logo.png">
+  <meta property="og:url" content="https://about.ghotimarket.com/">
+  <meta property="og:site_name" content="GHOTI MARKET">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GHOTI MARKET">
+  <meta name="twitter:description" content="বাংলাদেশের বিশ্বস্ত অনলাইন মার্কেটপ্লেস">
+  <meta name="twitter:image" content="https://www.ghotimarket.com/logo.png">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  
+  <style>
+    :root{
+      --green: #16A34A;    /* সবুজ */
+      --red: #DC2626;      /* লাল */
+      --white: #FFFFFF;    /* সাদা */
+      --light: #F0FDF4;
+      --dark: #14532D;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Noto Sans Bengali', sans-serif;scroll-behavior:smooth;}
+    body{background:var(--white);color:var(--dark);overflow-x:hidden;}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px;}
+    
+    /* Loading Animation */
+    .loader{position:fixed;top:0;left:0;width:100%;height:100%;background:var(--white);z-index:9999;display:flex;justify-content:center;align-items:center;transition:opacity 0.5s;}
+    .loader.hidden{opacity:0;pointer-events:none;}
+    .loader-logo{width:80px;height:80px;animation:pulse 1.5s infinite;}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+    
+    /* Top Logo + Name */
+    header.top{background:linear-gradient(90deg, var(--green), var(--red));padding:20px 0;border-bottom:4px solid var(--green);position:sticky;top:0;z-index:999;box-shadow:0 4px 20px rgba(22,163,74,0.3);}
+    .logo-wrap{display:flex;align-items:center;gap:15px;justify-content:center;}
+    .logo-wrap img{width:55px;height:55px;border-radius:12px;border:3px solid var(--white);background:var(--white);}
+    .logo-wrap h1{font-size:30px;font-weight:900;color:var(--white);text-shadow:0 2px 4px rgba(0,0,0,0.2);}
+    
+    /* Sections */
+    section{padding:100px 0;}
+    .card{opacity:0;transform:translateY(60px);transition:1s cubic-bezier(0.22, 1, 0.36, 1);}
+    .card.show{opacity:1;transform:translateY(0);}
+    .section-title{font-size:42px;font-weight:900;color:var(--green);text-align:center;margin-bottom:50px;}
+    .section-title span{color:var(--red);}
+    
+    /* About */
+    .about{background:var(--light);}
+    .about p{font-size:20px;text-align:center;color:#166534;max-width:850px;margin:0 auto;line-height:2;}
+    
+    /* Screenshot Slider */
+    .screenshot-wrap{display:flex;gap:30px;overflow-x:auto;padding:20px 0;scroll-snap-type:x mandatory;scroll-behavior:smooth;}
+    .screenshot-wrap::-webkit-scrollbar{height:10px;}
+    .screenshot-wrap::-webkit-scrollbar-thumb{background:linear-gradient(90deg, var(--green), var(--red));border-radius:10px;}
+    .step{min-width:320px;text-align:center;scroll-snap-align:center;background:var(--white);padding:25px;border-radius:20px;border:2px solid #BBF7D0;transition:0.4s;flex:0 0 320px;}
+    .step:hover{transform:scale(1.03);border-color:var(--green);}
+    .step img{width:100%;border-radius:15px;border:3px solid var(--green);}
+    .step .num{font-size:16px;color:var(--red);margin:20px 0 10px;font-weight:900;}
+    
+    /* Features */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:30px;}
+    .feature{background:var(--white);padding:40px;border-radius:20px;text-align:center;transition:0.4s;border:2px solid #BBF7D0;}
+    .feature:hover{border-color:var(--red);transform:translateY(-10px);box-shadow:0 20px 40px rgba(220,38,38,0.15);}
+    .feature .icon{font-size:50px;color:var(--green);margin-bottom:20px;}
+    .feature h3{font-size:22px;margin-bottom:10px;color:var(--red);}
+    
+    /* Why Choose Us */
+    .why-us{background:var(--light);}
+    .why-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:25px;}
+    .why-item{display:flex;gap:15px;align-items:flex-start;padding:25px;background:var(--white);border-radius:15px;border-left:5px solid var(--green);}
+    
+    /* Comparison Table */
+    .compare-table{width:100%;border-collapse:collapse;overflow-x:auto;display:block;border-radius:15px;}
+    .compare-table th{background:linear-gradient(90deg, var(--green), var(--red));color:var(--white);padding:18px;text-align:center;font-size:18px;}
+    .compare-table td{padding:18px;border:1px solid #E2E8F0;text-align:center;font-size:16px;}
+    .compare-table tr:nth-child(even){background:var(--light);}
+    .tick{color:var(--green);font-size:24px;font-weight:900;}
+    .cross{color:var(--red);font-size:24px;}
+    
+    /* FAQ */
+    .faq-item{background:var(--white);padding:25px;border-radius:12px;margin-bottom:15px;border:2px solid #BBF7D0;transition:0.3s;}
+    .faq-item:hover{border-color:var(--red);}
+    .faq-item strong{color:var(--green);display:block;margin-bottom:10px;font-size:18px;}
+    
+    /* UI Components */
+    #progress-bar{position:fixed;top:0;left:0;width:0%;height:5px;background:linear-gradient(90deg,#16A34A,#DC2626);z-index:99999;transition:width .1s linear;box-shadow:0 0 10px rgba(22,163,74,.5);}
+    #backToTop{position:fixed;right:20px;bottom:20px;width:55px;height:55px;border:none;border-radius:50%;background:linear-gradient(135deg,#16A34A,#DC2626);color:#fff;font-size:22px;cursor:pointer;display:none;z-index:99999;box-shadow:0 8px 20px rgba(0,0,0,.25);transition:.3s;}
+    #backToTop:hover{transform:translateY(-5px) scale(1.08);}
+    
+    /* Menu & Overlay */
+    #menuBtn{position:fixed;top:20px;left:20px;z-index:1000000;background:none;border:none;color:#fff;font-size:30px;cursor:pointer;}
+    #sideMenu{position:fixed;top:0;left:-300px;width:280px;height:100%;background:#fff;z-index:999999;transition:.35s;box-shadow:5px 0 25px rgba(0,0,0,.2);overflow-y:auto;}
+    #sideMenu.active{left:0;}
+    .menu-header{background:linear-gradient(135deg,#16A34A,#DC2626);padding:30px 20px;text-align:center;color:#fff;}
+    .menu-header img{width:70px;border-radius:15px;margin-bottom:10px;}
+    #sideMenu a{display:flex;align-items:center;gap:15px;padding:18px 20px;text-decoration:none;color:#14532D;font-weight:700;border-bottom:1px solid #eee;}
+    #sideMenu a:hover{background:#F0FDF4;}
+    #sideMenu i{width:25px;font-size:20px;color:#16A34A;}
+    #menuOverlay{position:fixed;inset:0;background:rgba(0,0,0,.4);display:none;z-index:999998;}
+    #menuOverlay.active{display:block;}
+
+    /* Share Button */
+    .btn-share{background:#2563eb; margin: 20px auto; display: block; cursor: pointer; border: none; color: white; padding: 15px 30px; border-radius: 12px; font-weight: 900; font-size: 16px; transition: 0.3s;}
+    .btn-share:hover{transform: scale(1.05); background: #1d4ed8;}
+
+    footer{background:linear-gradient(135deg, var(--dark), #052e16);padding:80px 20px;text-align:center;}
+    .btn-group{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:40px;}
+    .btn{padding:18px 40px;border-radius:15px;text-decoration:none;font-weight:900;font-size:17px;transition:0.4s;border:3px solid var(--white);display:inline-flex;align-items:center;gap:10px;color:var(--white);}
+    .btn:hover{transform:translateY(-5px) scale(1.05);box-shadow:0 10px 30px rgba(255,255,255,0.2);}
+    .btn-shop{background:var(--red);}
+    .btn-seller{background:var(--green);}
+    .btn-app{background:#0ea5e9;}
+    .btn-contact{background:#f59e0b;}
+    
+    .social a{color:var(--white);font-size:28px;margin:0 15px;transition:0.3s;}
+    .social a:hover{color:var(--red);}
+    .copyright{color:#86efac;margin-top:30px;}
+    
+    @media(max-width:768px){
+      .section-title{font-size:30px;}
+      .btn-group{flex-direction:column;align-items:center;}
+      .btn{width:90%;justify-content:center;}
+      section{padding:70px 0;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <img src="https://www.ghotimarket.com/logo.png" class="loader-logo" alt="Loading">
+  </div>
+
+  <div id="progress-bar"></div> <!-- Fixed: Moved inside body -->
+
+  <button id="menuBtn" aria-label="Menu">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div id="sideMenu">
+    <div class="menu-header">
+        <img src="https://www.ghotimarket.com/logo.png"
+     alt="GHOTI MARKET Logo"
+     loading="lazy"
+     decoding="async">
+        <h2>GHOTI MARKET</h2>
+    </div>
+    <a href="https://app.ghotimarket.com"><i class="fab fa-google-play"></i><span>App Download</span></a>
+    <a href="https://ghotimarket.com/contact"><i class="fas fa-headset"></i><span>Support</span></a>
+    <a href="https://ghotimarket.com/privacy-policy"><i class="fas fa-user-shield"></i><span>Privacy Policy</span></a>
+    <a href="https://ghotimarket.com/termsandcondition"><i class="fas fa-file-contract"></i><span>Terms & Conditions</span></a>
+    <a href="https://seller.ghotimarket.com/signup"><i class="fas fa-store"></i><span>Create Seller Account</span></a>
+  </div>
+
+  <div id="menuOverlay"></div>
+
+  <header class="top">
+    <div class="container">
+      <div class="logo-wrap">
+        <img src="https://www.ghotimarket.com/logo.png" alt="GHOTI MARKET Logo">
+        <h1>GHOTI MARKET</h1>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="about">
+      <div class="card">
+        <h2 class="section-title">GHOTI MARKET <span>কি?</span></h2>
+        <p><b>GHOTI MARKET</b> হলো বাংলাদেশের একটি ১০০% দেশি অনলাইন মার্কেটপ্লেস। আমাদের লক্ষ্য বাংলাদেশের ৬৪ জেলার প্রতিটি মানুষের কাছে বিশ্বস্ত, দ্রুত এবং সাশ্রয়ী অনলাইন শপিং পৌঁছে দেওয়া। "ঘটি" মানে ঘরের নিত্য প্রয়োজনীয় জিনিস। আমরাও চাই আপনার নিত্য প্রয়োজন মেটাতে। <span id="year3"></span> সালে আমরা বাংলাদেশের সেরা ই-কমার্স হওয়ার লক্ষ্যে কাজ করছি।</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h2 class="section-title">অর্ডার করবেন <span>কিভাবে?</span></h2>
+        <div class="screenshot-wrap">
+          <div class="step"><img src="20260718_152658.jpg" alt="Step 1"><div class="num">STEP 01</div><p>সেলার শপ বা ক্যাটাগরি নির্বাচন করুন</p></div>
+          <div class="step"><img src="20260718_153230.jpg" alt="Step 2"><div class="num">STEP 02</div><p>পণ্য সিলেক্ট করুন।</p></div>
+          <div class="step"><img src="20260718_153456.jpg" alt="Step 3"><div class="num">STEP 03</div><p>পণ্যের তথ্য পড়ুন।</p></div>
+          <div class="step"><img src="20260718_153715.jpg" alt="Step 4"><div class="num">STEP 04</div><p>নীলিমালা পড়ে সম্মতি দিন</p></div>
+          <div class="step"><img src="20260718_153851.jpg" alt="Step 5"><div class="num">STEP 05</div><p>Whatsapp button এ ক্লিক করুন</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h2 class="section-title">আমাদের <span>বিশেষত্ব</span></h2>
+        <div class="grid">
+          <div class="feature"><div class="icon"><i class="fa-solid fa-shield-halved"></i></div><h3>১০০% বিশ্বস্ততা</h3><p>ভেরিফাইড সেলার ও ৭ দিনের রিটার্ন পলিসি।</p></div>
+          <div class="feature"><div class="icon"><i class="fa-solid fa-truck-fast"></i></div><h3>সুপার ফাস্ট ডেলিভারি</h3><p>সারাদেশে ২-৫ দিনের মধ্যে হোম ডেলিভারি।</p></div>
+          <div class="feature"><div class="icon"><i class="fa-solid fa-headset"></i></div><h3>২৪/৭ সাপোর্ট</h3><p>GHOTI MARKET AI ও লাইভ সাপোর্ট টিম।</p></div>
+          <div class="feature"><div class="icon"><i class="fa-solid fa-flag"></i></div><h3>মেইড ইন বাংলাদেশ</h3><p>দেশি পণ্যকে প্রাধান্য দিয়ে দেশের অর্থনীতি।</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-us">
+      <div class="card">
+        <h2 class="section-title">কেন <span>GHOTI MARKET</span> বেছে নিবেন?</h2>
+        <div class="why-grid">
+          <div class="why-item"><i class="fa-solid fa-check-circle" style="color:var(--green);font-size:24px;"></i><div><b>ক্যাশ অন ডেলিভারি</b><p>অগ্রিম পেমেন্টের ঝামেলা নাই</p></div></div>
+          <div class="why-item"><i class="fa-solid fa-check-circle" style="color:var(--green);font-size:24px;"></i><div><b>বেস্ট প্রাইস গ্যারান্টি</b><p>সবচেয়ে কম দামে সেরা পণ্য</p></div></div>
+          <div class="why-item"><i class="fa-solid fa-check-circle" style="color:var(--green);font-size:24px;"></i><div><b>সহজ রিটার্ন</b><p>৭ দিনের মধ্যে ফেরতের সুবিধা</p></div></div>
+          <div class="why-item"><i class="fa-solid fa-check-circle" style="color:var(--green);font-size:24px;"></i><div><b>লোকাল সেলার</b><p>আপনার এলাকার সেলার থেকেই কিনুন</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h2 class="section-title">তুলনা <span><span id="year2"></span></span></h2>
+        <table class="compare-table">
+          <thead><tr><th>ফিচার</th><th>GHOTI MARKET</th><th>Daraz</th><th>Alibaba</th><th>AliExpress</th></tr></thead>
+          <tbody>
+            <tr><td><b>বাংলাদেশি কোম্পানি</b></td><td class="tick">✓</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+            <tr><td><b>ডেলিভারি টাইম</b></td><td class="tick">✓ 2-5 দিন</td><td class="tick">✓ 3-7 দিন</td><td class="cross">✗ 20-40 দিন</td><td class="cross">✗ 15-30 দিন</td></tr>
+            <tr><td><b>ক্যাশ অন ডেলিভারি</b></td><td class="tick">✓</td><td class="tick">✓</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+            <tr><td><b>বাংলায় সাপোর্ট</b></td><td class="tick">✓</td><td class="tick">✓</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+            <tr><td><b>কাস্টমস ঝামেলা</b></td><td class="tick">✓ নাই</td><td class="tick">✓ নাই</td><td class="cross">✗ আছে</td><td class="cross">✗ আছে</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h2 class="section-title">সাধারণ <span>প্রশ্ন</span></h2>
+        <div class="faq-item"><strong>প্রশ্ন: GHOTI MARKET কি Daraz-এর বিকল্প?</strong><p>উত্তর: হ্যাঁ। GHOTI MARKET একটি ১০০% বাংলাদেশি অনলাইন মার্কেটপ্লেস।</p></div>
+        <div class="faq-item"><strong>প্রশ্ন: কিভাবে অর্ডার করবো?</strong><p>উত্তর: পণ্য বেছে নিন এবং "WhatsApp Order" বাটনে ক্লিক করুন।</p></div>
+        <div class="faq-item"><strong>প্রশ্ন: ডেলিভারি কতদিন লাগে?</strong><p>উত্তর: সাধারণত ২-৫ দিন।</p></div>
+        <div class="faq-item"><strong>প্রশ্ন: সেলার হওয়ার জন্য কী কী লাগবে?</strong><p>উত্তর: NID, শপের তথ্য এবং সক্রিয় WhatsApp নম্বর।</p></div>
+        <div class="faq-item"><strong>প্রশ্ন: GHOTI MARKET কি নিরাপদ?</strong><p>উত্তর: হ্যাঁ, এখানে ভেরিফাইড সেলার ও অফিশিয়াল সাপোর্ট রয়েছে।</p></div>
+      </div>
+    </section>
+
+    <button class="btn-share" id="shareBtn"> <!-- Fixed: Moved to ID based listener -->
+        <i class="fas fa-share-alt"></i> Share GHOTI MARKET
+    </button>
+
+    <footer>
+        <div class="btn-group">
+          <a href="https://www.ghotimarket.com" class="btn btn-shop" target="_blank"><i class="fa-solid fa-globe"></i> Website</a>
+          <a href="https://seller.ghotimarket.com/signup" class="btn btn-seller" target="_blank"><i class="fa-solid fa-store"></i> Create Seller Account</a>
+          <a href="https://app.ghotimarket.com" class="btn btn-app" target="_blank"><i class="fa-brands fa-google-play"></i> App Download</a>
+          <a href="https://ghotimarket.com/contact" class="btn btn-contact" target="_blank"><i class="fa-solid fa-headset"></i> Contact</a>
+        </div>
+        <div class="social">
+          <a href="https://www.facebook.com/ghotimarket"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.youtube.com/@ghotimarket"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://wa.me/8801727003670"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <p class="copyright">© <span id="year5"></span> GHOTI MARKET। বাংলাদেশের বিশ্বস্ত অনলাইন মার্কেটপ্লেস।</p>
+    </footer>
+  </div>
+
+  <button id="backToTop" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // Fixed: All scripts consolidated and wrapped in DOMContentLoaded or load where appropriate
+    document.addEventListener("DOMContentLoaded", () => {
+
+        // 1. Loading Screen & Animation // Fixed
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            if(loader) loader.classList.add('hidden');
+            
+            // Confetti Logic // Fixed
+            if (!localStorage.getItem("welcomeConfetti")) {
+                confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } });
+                localStorage.setItem("welcomeConfetti", "true");
+            }
+        });
+
+        // 2. Set Dynamic Year // Fixed: Combined duplicate year logic
+        const currentYear = new Date().getFullYear();
+        document.querySelectorAll("#year2, #year3, #year5").forEach(el => {
+            el.textContent = currentYear;
+        });
+
+        // 3. Side Menu Logic // Fixed: Consolidated duplicates
+        const menuBtn = document.getElementById("menuBtn");
+        const sideMenu = document.getElementById("sideMenu");
+        const menuOverlay = document.getElementById("menuOverlay");
+
+        const toggleMenu = (isActive) => {
+            sideMenu.classList.toggle("active", isActive);
+            menuOverlay.classList.toggle("active", isActive);
+        };
+
+        if(menuBtn) menuBtn.onclick = () => toggleMenu(true);
+        if(menuOverlay) menuOverlay.onclick = () => toggleMenu(false);
+
+        // 4. Scroll Events (Progress Bar & Back To Top) // Fixed: Merged into one event listener
+        const backBtn = document.getElementById("backToTop");
+        const progressBar = document.getElementById("progress-bar");
+
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+
+            if(progressBar) progressBar.style.width = scrollPercent + "%";
+            if(backBtn) backBtn.style.display = scrollTop > 300 ? "block" : "none";
+        });
+
+        if(backBtn) {
+            backBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        // 5. Screenshot Auto Slider // Fixed: Cleaned and optimized
+        const slider = document.querySelector(".screenshot-wrap");
+        if (slider) {
+            const steps = slider.querySelectorAll(".step");
+            let index = 0;
+            let interval;
+
+            const startAutoSwipe = () => {
+                interval = setInterval(() => {
+                    index = (index >= steps.length - 1) ? 0 : index + 1;
+                    slider.scrollTo({ left: steps[index].offsetLeft - 20, behavior: "smooth" });
+                }, 3000); // Fixed: Consistent timing
+            };
+
+            startAutoSwipe();
+            slider.addEventListener("touchstart", () => clearInterval(interval));
+            slider.addEventListener("touchend", startAutoSwipe);
+        }
+
+        // 6. Intersection Observer for Cards // Fixed
+        const cards = document.querySelectorAll('.card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) entry.target.classList.add('show');
+            });
+        }, { threshold: 0.1 });
+        cards.forEach(card => observer.observe(card));
+
+        // 7. Share Functionality // Fixed: Attached to ID
+        const shareBtn = document.getElementById("shareBtn");
+        if(shareBtn) {
+            shareBtn.onclick = async () => {
+                const shareData = {
+                    title: "GHOTI MARKET",
+                    text: "বাংলাদেশের বিশ্বস্ত অনলাইন মার্কেটপ্লেস 🇧🇩",
+                    url: "https://www.ghotimarket.com"
+                };
+                if (navigator.share) {
+                    try { await navigator.share(shareData); } catch (e) {}
+                } else {
+                    navigator.clipboard.writeText(shareData.url);
+                    alert("লিংক কপি হয়েছে!");
+                }
+            };
+        }
+    });
+  </script>
+</body>
+</html>
